@@ -63,6 +63,14 @@ a {
 .pd-0 {
     padding: 0;
 }
+.mh-mt-240 {
+    @media (max-width: 1024px) {
+        max-height: 240px;
+    }
+}
+.o-h {
+    overflow: hidden;
+}
 
 #root {
     background-color: $color-bg;
@@ -111,7 +119,7 @@ a {
         width: 100%;
     }
     &__img {
-        margin-bottom: 30px;
+        margin-bottom: 48px;
         // ./asset/img/presidential1 1.png
         background-image: url(./asset/img/presidential11.png);
         background-repeat: no-repeat;
@@ -133,6 +141,7 @@ a {
         color: $text-color-t1;
         margin-top: 24px;
         margin-bottom: 56px;
+        font-family: $font-2;
     }
     &__p {
         color: $text-color-t1;
@@ -230,6 +239,9 @@ a {
         line-height: 32px;
         /* or 160% */
         color: $text-color-t1;
+        &--dp {
+            text-align: end;
+        }
     }
 
     &__row-wrap {
@@ -251,7 +263,7 @@ a {
             display: flex;
             justify-content: center;
             margin-top: 160px;
-            margin-bottom: 224px;
+            margin-bottom: 0;
         }
         padding: 32px 63px;
         background-color: $color-p1;
@@ -447,12 +459,12 @@ a {
                 /* identical to box height, or 145% */
 
                 text-transform: uppercase;
-                color:$text-color-g1;
-                &:not(:last-child){
+                color: $text-color-g1;
+                &:not(:last-child) {
                     padding-right: 8px;
-                    border-right: 1px solid #8A8787;
+                    border-right: 1px solid #8a8787;
                 }
-                &:not(:first-child){
+                &:not(:first-child) {
                     padding-left: 8px;
                 }
             }
@@ -629,6 +641,10 @@ a {
         }
     }
     .per {
+        margin-bottom: 134px;
+        &__img {
+            margin-bottom: 56px;
+        }
         &__p {
             font-weight: 400;
         }
@@ -650,8 +666,8 @@ a {
             }
         }
         &__header {
-            margin-top: 88px;
-            margin-bottom: 64px;
+            margin-top: 0px;
+            margin-bottom: 88px;
             font-weight: 500;
             font-size: 40px;
             line-height: 48px;
@@ -668,7 +684,13 @@ a {
             margin-left: 50px;
         }
         &__item {
-            margin-bottom: 57px;
+            @media screen and(min-width:1024px) {
+                margin-bottom: 57px;
+
+                &-end {
+                    margin-top: 58px;
+                }
+            }
         }
         &__title {
             font-family: $font-2;
@@ -718,11 +740,11 @@ a {
             letter-spacing: -0.02em;
             text-transform: uppercase;
             color: $text-color-w0;
-            margin-bottom: 116px;
+            margin-bottom: 160px;
             &--rps {
                 display: flex;
                 order: 2;
-                margin-top: 114px;
+                margin-top: 96px;
                 justify-content: center;
                 align-items: center;
             }
@@ -738,6 +760,10 @@ a {
             font-size: 64px;
             line-height: 72px;
             /* identical to box height, or 130% */
+            &--end {
+                margin-top: 58px;
+                margin-bottom: 24px;
+            }
         }
         &__content {
             font-weight: 500;
@@ -759,6 +785,9 @@ a {
                 text-align: end;
             }
         }
+        .template__items--flex-end {
+            justify-content: center;
+        }
         &__logo {
             width: 90%;
         }
@@ -766,8 +795,8 @@ a {
             &--rps {
                 display: flex;
                 justify-content: center;
-                margin-top: 160px;
-                margin-bottom: 224px;
+                margin-top: 200px;
+                margin-bottom: 0px;
             }
             padding: 32px 63px;
             background-color: $color-p1;
@@ -934,13 +963,15 @@ a {
             letter-spacing: -0.02em;
             text-transform: uppercase;
             color: $text-color-w0;
-            margin-bottom: 116px;
+            margin-bottom: 120px;
             &--rps {
                 display: flex;
                 order: 2;
                 margin-top: 114px;
                 justify-content: center;
                 align-items: center;
+                margin-top: 64px;
+                margin-bottom: 0;
             }
         }
     }
@@ -964,7 +995,7 @@ a {
             line-height: 20px;
             font-weight: bold;
             margin-bottom: 17px;
-            margin-top: 64px;
+            margin-top: 0px;
             padding-left: 34px;
             /* identical to box height, or 130% */
         }
@@ -976,6 +1007,9 @@ a {
             color: $text-color-t1;
             margin-bottom: 49px;
             padding-left: 34px;
+            &--dp {
+                text-align: left;
+            }
         }
 
         &__row-wrap {
@@ -992,17 +1026,14 @@ a {
             }
         }
         &__logo {
-            width: 90%;
-            @media screen and(max-width:992px) {
-                display: none;
-            }
+            display: none;
         }
         &__btn {
             &--rps {
                 display: flex;
                 justify-content: center;
                 margin-top: 160px;
-                margin-bottom: 224px;
+                margin-bottom: 0px;
             }
             padding: 32px 63px;
             background-color: $color-p1;
@@ -1063,5 +1094,13 @@ a {
             border: 2px solid $text-color-b3;
             margin-top: 32px;
         }
+    }
+}
+@media screen and (min-width:1024px) and (max-width:1463px) {
+    .tab-pd-r{
+        padding-right: 16px;
+    }
+    .tab-pd-l{
+        padding-left: 16px;
     }
 }
